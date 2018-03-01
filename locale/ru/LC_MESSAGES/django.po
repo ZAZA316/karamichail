@@ -1,0 +1,300 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-01 01:36+0800\n"
+"PO-Revision-Date: 2018-02-28 11:19+0000\n"
+"Last-Translator: b'  <>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.8.1\n"
+
+#: .\karamichail\dashboard.py:12
+msgid "Support"
+msgstr ""
+
+#: .\karamichail\dashboard.py:15
+msgid "Django documentation"
+msgstr ""
+
+#: .\karamichail\dashboard.py:20
+msgid "Django \"django-users\" mailing list"
+msgstr ""
+
+#: .\karamichail\dashboard.py:25
+msgid "Django irc channel"
+msgstr ""
+
+#: .\karamichail\dashboard.py:34
+msgid "Language"
+msgstr "Язык"
+
+#: .\product\apps.py:7
+msgid "Product"
+msgstr "Продукт"
+
+#: .\product\models.py:8
+msgid "Name"
+msgstr ""
+
+#: .\product\models.py:9
+msgid "Icon"
+msgstr ""
+
+#: .\product\models.py:13
+msgid "Description"
+msgstr ""
+
+#: .\product\models.py:21
+msgid "archived"
+msgstr ""
+
+#: .\product\models.py:22
+msgid "rented"
+msgstr ""
+
+#: .\product\models.py:23
+msgid "sold"
+msgstr ""
+
+#: .\product\models.py:24
+msgid "renting"
+msgstr ""
+
+#: .\product\models.py:25
+msgid "in sale"
+msgstr ""
+
+#: .\product\models.py:26
+msgid "future"
+msgstr ""
+
+#: .\product\models.py:30 .\product\models.py:73
+msgid "Title"
+msgstr ""
+
+#: .\product\models.py:31
+msgid "General Description"
+msgstr ""
+
+#: .\product\models.py:32
+msgid "Location Description"
+msgstr ""
+
+#: .\product\models.py:33
+msgid "Interior Description"
+msgstr ""
+
+#: .\product\models.py:34
+msgid "Exterior Description"
+msgstr ""
+
+#: .\product\models.py:36
+msgid "Longitude"
+msgstr ""
+
+#: .\product\models.py:37
+msgid "Latitude"
+msgstr ""
+
+#: .\product\models.py:38
+msgid "Call to Action"
+msgstr ""
+
+#: .\product\models.py:40
+msgid "Price"
+msgstr ""
+
+#: .\product\models.py:41
+msgid "Surface"
+msgstr ""
+
+#: .\product\models.py:42
+msgid "Bedrooms"
+msgstr ""
+
+#: .\product\models.py:43
+msgid "Bathrooms"
+msgstr ""
+
+#: .\product\models.py:44 .\product\models.py:74
+msgid "Comment"
+msgstr ""
+
+#: .\product\models.py:45
+msgid "Status"
+msgstr ""
+
+#: .\product\models.py:46
+msgid "Promoted"
+msgstr ""
+
+#: .\product\models.py:47
+msgid "Promote Weight"
+msgstr ""
+
+#: .\product\models.py:48
+msgid "Slider"
+msgstr ""
+
+#: .\product\models.py:49
+msgid "Slider Weight"
+msgstr ""
+
+#: .\product\models.py:50
+msgid "Date"
+msgstr ""
+
+#: .\product\models.py:51 .\product\models.py:76
+msgid "Weight"
+msgstr ""
+
+#: .\product\models.py:67
+msgid "wide"
+msgstr "широкий"
+
+#: .\product\models.py:68
+msgid "narrow"
+msgstr "узкий"
+
+#: .\product\models.py:72
+msgid "Image"
+msgstr ""
+
+#: .\product\models.py:75
+msgid "Position"
+msgstr ""
+
+#: .\templates\zinnia\base.html:17 .\templates\zinnia\skeleton.html:36
+msgid "RSS feed of last entries"
+msgstr ""
+
+#: .\templates\zinnia\base.html:18
+msgid "RSS feed of last discussions"
+msgstr ""
+
+#: .\templates\zinnia\base.html:23
+msgid "Blog"
+msgstr ""
+
+#: .\templates\zinnia\base.html:29
+msgid "Welcome!"
+msgstr ""
+
+#: .\templates\zinnia\base.html:31
+msgid "Welcome to our site."
+msgstr ""
+
+#: .\templates\zinnia\base.html:36
+msgid "Categories"
+msgstr ""
+
+#: .\templates\zinnia\base.html:42
+msgid "Authors"
+msgstr ""
+
+#: .\templates\zinnia\base.html:47
+msgid "Calendar"
+msgstr ""
+
+#: .\templates\zinnia\base.html:52
+msgid "Tags"
+msgstr ""
+
+#: .\templates\zinnia\base.html:57
+msgid "Recent entries"
+msgstr ""
+
+#: .\templates\zinnia\base.html:61
+msgid "Recent comments"
+msgstr ""
+
+#: .\templates\zinnia\base.html:65
+msgid "Recent linkbacks"
+msgstr ""
+
+#: .\templates\zinnia\base.html:69
+msgid "Random entries"
+msgstr ""
+
+#: .\templates\zinnia\base.html:73
+msgid "Popular entries"
+msgstr ""
+
+#: .\templates\zinnia\base.html:77
+msgid "Archives"
+msgstr ""
+
+#: .\templates\zinnia\base.html:82
+msgid "Tools"
+msgstr ""
+
+#: .\templates\zinnia\base.html:86 .\templates\zinnia\base.html:87
+msgid "Dashboard"
+msgstr ""
+
+#: .\templates\zinnia\base.html:93 .\templates\zinnia\base.html:94
+msgid "Post an entry"
+msgstr ""
+
+#: .\templates\zinnia\base.html:101 .\templates\zinnia\base.html:102
+msgid "Log out"
+msgstr ""
+
+#: .\templates\zinnia\skeleton.html:10 .\templates\zinnia\skeleton.html:54
+msgid "Just another Zinnia weblog."
+msgstr ""
+
+#: .\templates\zinnia\skeleton.html:31 .\templates\zinnia\skeleton.html:32
+#: .\templates\zinnia\skeleton.html:70 .\templates\zinnia\skeleton.html:71
+msgid "Sitemap"
+msgstr ""
+
+#: .\templates\zinnia\skeleton.html:37
+msgid "RSS feed"
+msgstr ""
+
+#: .\templates\zinnia\skeleton.html:44
+msgid "Keywords..."
+msgstr ""
+
+#: .\templates\zinnia\skeleton.html:62
+msgid "Useful links"
+msgstr ""
+
+#: .\templates\zinnia\skeleton.html:65 .\templates\zinnia\skeleton.html:66
+msgid "Weblog index"
+msgstr ""
+
+#: .\templates\zinnia\skeleton.html:77
+msgid "Search"
+msgstr ""
+
+#: .\templates\zinnia\skeleton.html:87
+#, python-format
+msgid ""
+"Powered by <a href=\"http://www.djangoproject.com\">Django</a> and <a href="
+"\"https://github.com/Fantomas42/django-blog-zinnia\">Zinnia "
+"%(ZINNIA_VERSION)s</a>."
+msgstr ""
+
+#~ msgid "English"
+#~ msgstr "Английский"
+
+#~ msgid "Greek"
+#~ msgstr "Греческий"
+
+#~ msgid "Russia"
+#~ msgstr "Россия"
