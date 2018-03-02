@@ -25,7 +25,7 @@ SECRET_KEY = 'k(9t4(4b6fa)6*8vvsn+!m$+roxd$drz8+m3t4vj&1g2cp0uuk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['185.236.130.149']
 
 SITE_ID = 1
 
@@ -44,12 +44,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'product',
     'ckeditor',
+    # 'disqus',
     'django_comments',
     'mptt',
     'tagging',
     'zinnia',
     'rosetta',
-    'admin_reorder',
+    # 'admin_reorder',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'admin_reorder.middleware.ModelAdminReorder',
+    # 'admin_reorder.middleware.ModelAdminReorder',
 ]
 
 ROOT_URLCONF = 'karamichail.urls'
@@ -116,6 +117,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+'''DISQUS_API_KEY = '6bE21E3j7aSNuOUUlh7zDXGAp5KQ1RYQD5h6er4Demf9iHOwTrWw5FPes7uvGxEJ'
+DISQUS_WEBSITE_SHORTNAME = 'karamichail'
+
 ADMIN_REORDER = (
     {'app': 'auth', 'models': ('auth.User', 'auth.Group')},
     {'app': 'product'},
@@ -130,7 +134,7 @@ ADMIN_REORDER = (
             'tagging.TaggedItem',
         )
     },
-)
+)'''
 
 
 # Internationalization
@@ -205,4 +209,4 @@ JET_THEMES = [
 
 JET_SIDE_MENU_COMPACT = True
 
-JET_INDEX_DASHBOARD = 'karamichail.dashboard.CustomIndexDashboard'
+# JET_INDEX_DASHBOARD = 'karamichail.dashboard.CustomIndexDashboard'

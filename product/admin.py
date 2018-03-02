@@ -3,8 +3,9 @@ from django.contrib import admin
 from product.models import *
 
 
-class ImageInline(admin.TabularInline):
+class ImageInline(admin.StackedInline):
     model = Image
+    extra = 1
 
 
 class ProjectAdmin(admin.ModelAdmin):
@@ -18,7 +19,7 @@ class ProjectAdmin(admin.ModelAdmin):
                                      'interior_description', 'exterior_description',
                                      'comment', 'call2action']}),
         ('Details', {'fields': ['long', 'lat', 'price', 'surface', 'bedrooms', 'bathrooms']}),
-        ('Publish', {'fields': ['status', 'promoted', 'promote_weight', 'slider', 'slider_weight']}),
+        ('Publish', {'fields': ['status', 'promoted', 'promote_weight', 'slider', 'slider_weight', 'weight', 'date']}),
     ]
 
 

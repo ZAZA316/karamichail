@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
 from ckeditor.fields import RichTextField
@@ -6,7 +7,10 @@ from ckeditor.fields import RichTextField
 
 class Feature(models.Model):
     name = models.CharField(verbose_name=_('Name'), max_length=50)
-    icon = models.ImageField(verbose_name=_('Icon'), upload_to='features/')
+    icon = models.ImageField(verbose_name=_('Icon'), upload_to='features/', blank=True)
+
+    def __str__(self):
+        return self.name
 
     class Meta:
         verbose_name = _('Feature')
@@ -14,7 +18,11 @@ class Feature(models.Model):
 
 
 class Category(models.Model):
+    title = models.CharField(verbose_name=_('Title'), max_length=50)
     description = RichTextField(verbose_name=_('Description'))
+
+    def __str__(self):
+        return self.title
 
     class Meta:
         verbose_name = _('Category')
@@ -23,15 +31,15 @@ class Category(models.Model):
 
 class Project(models.Model):
     STATUS = (
-        (0, _('archived')),
-        (1, _('rented')),
-        (2, _('sold')),
-        (3, _('renting')),
-        (4, _('in sale')),
-        (5, _('future')),
+        (0, _('Archived')),
+        (1, _('Rented')),
+        (2, _('Sold')),
+        (3, _('Renting')),
+        (4, _('In sale')),
+        (5, _('Future')),
     )
 
-    slug = models.SlugField(unique=True, blank=True, null=True)
+    slug = models.SlugField(unique=True)
     title = models.CharField(verbose_name=_('Title'), max_length=255)
     general_description = RichTextField(verbose_name=_('General Description'))
     location_description = RichTextField(verbose_name=_('Location Description'), blank=True)
@@ -52,7 +60,7 @@ class Project(models.Model):
     promote_weight = models.IntegerField(verbose_name=_('Promote Weight'), default=0)
     slider = models.BooleanField(verbose_name=_('Slider'), default=False)
     slider_weight = models.IntegerField(verbose_name=_('Slider Weight'), default=0)
-    date = models.DateField(verbose_name=_('Date'), auto_now_add=True)
+    date = models.DateField(verbose_name=_('Date'), default=timezone.now)
     weight = models.IntegerField(verbose_name=_('Weight'), default=0)
 
     def __str__(self):

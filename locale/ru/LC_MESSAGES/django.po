@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-01 01:36+0800\n"
+"POT-Creation-Date: 2018-03-02 00:25+0800\n"
 "PO-Revision-Date: 2018-02-28 11:19+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,136 +45,164 @@ msgstr "Язык"
 msgid "Product"
 msgstr "Продукт"
 
-#: .\product\models.py:8
+#: .\product\models.py:9
 msgid "Name"
 msgstr ""
 
-#: .\product\models.py:9
+#: .\product\models.py:10
 msgid "Icon"
 msgstr ""
 
-#: .\product\models.py:13
-msgid "Description"
+#: .\product\models.py:16
+msgid "Feature"
 msgstr ""
 
-#: .\product\models.py:21
-msgid "archived"
+#: .\product\models.py:17
+msgid "Features"
 msgstr ""
 
-#: .\product\models.py:22
-msgid "rented"
-msgstr ""
-
-#: .\product\models.py:23
-msgid "sold"
-msgstr ""
-
-#: .\product\models.py:24
-msgid "renting"
-msgstr ""
-
-#: .\product\models.py:25
-msgid "in sale"
-msgstr ""
-
-#: .\product\models.py:26
-msgid "future"
-msgstr ""
-
-#: .\product\models.py:30 .\product\models.py:73
+#: .\product\models.py:21 .\product\models.py:43 .\product\models.py:88
 msgid "Title"
 msgstr ""
 
-#: .\product\models.py:31
-msgid "General Description"
+#: .\product\models.py:22
+msgid "Description"
 msgstr ""
 
-#: .\product\models.py:32
-msgid "Location Description"
+#: .\product\models.py:28
+msgid "Category"
 msgstr ""
 
-#: .\product\models.py:33
-msgid "Interior Description"
+#: .\product\models.py:29 .\templates\zinnia\base.html:36
+msgid "Categories"
 msgstr ""
 
 #: .\product\models.py:34
-msgid "Exterior Description"
+msgid "Archived"
+msgstr ""
+
+#: .\product\models.py:35
+msgid "Rented"
 msgstr ""
 
 #: .\product\models.py:36
-msgid "Longitude"
+msgid "Sold"
 msgstr ""
 
 #: .\product\models.py:37
-msgid "Latitude"
+msgid "Renting"
 msgstr ""
 
 #: .\product\models.py:38
-msgid "Call to Action"
+msgid "In sale"
 msgstr ""
 
-#: .\product\models.py:40
-msgid "Price"
+#: .\product\models.py:39
+msgid "Future"
 msgstr ""
 
-#: .\product\models.py:41
-msgid "Surface"
-msgstr ""
-
-#: .\product\models.py:42
-msgid "Bedrooms"
-msgstr ""
-
-#: .\product\models.py:43
-msgid "Bathrooms"
-msgstr ""
-
-#: .\product\models.py:44 .\product\models.py:74
-msgid "Comment"
+#: .\product\models.py:44
+msgid "General Description"
 msgstr ""
 
 #: .\product\models.py:45
-msgid "Status"
+msgid "Location Description"
 msgstr ""
 
 #: .\product\models.py:46
-msgid "Promoted"
+msgid "Interior Description"
 msgstr ""
 
 #: .\product\models.py:47
-msgid "Promote Weight"
-msgstr ""
-
-#: .\product\models.py:48
-msgid "Slider"
+msgid "Exterior Description"
 msgstr ""
 
 #: .\product\models.py:49
-msgid "Slider Weight"
+msgid "Longitude"
 msgstr ""
 
 #: .\product\models.py:50
+msgid "Latitude"
+msgstr ""
+
+#: .\product\models.py:51
+msgid "Call to Action"
+msgstr ""
+
+#: .\product\models.py:53
+msgid "Price"
+msgstr ""
+
+#: .\product\models.py:54
+msgid "Surface"
+msgstr ""
+
+#: .\product\models.py:55
+msgid "Bedrooms"
+msgstr ""
+
+#: .\product\models.py:56
+msgid "Bathrooms"
+msgstr ""
+
+#: .\product\models.py:57 .\product\models.py:89
+msgid "Comment"
+msgstr ""
+
+#: .\product\models.py:58
+msgid "Status"
+msgstr ""
+
+#: .\product\models.py:59
+msgid "Promoted"
+msgstr ""
+
+#: .\product\models.py:60
+msgid "Promote Weight"
+msgstr ""
+
+#: .\product\models.py:61
+msgid "Slider"
+msgstr ""
+
+#: .\product\models.py:62
+msgid "Slider Weight"
+msgstr ""
+
+#: .\product\models.py:63
 msgid "Date"
 msgstr ""
 
-#: .\product\models.py:51 .\product\models.py:76
+#: .\product\models.py:64 .\product\models.py:91
 msgid "Weight"
 msgstr ""
 
-#: .\product\models.py:67
+#: .\product\models.py:75
+msgid "Project"
+msgstr ""
+
+#: .\product\models.py:76
+msgid "Projects"
+msgstr ""
+
+#: .\product\models.py:82
 msgid "wide"
 msgstr "широкий"
 
-#: .\product\models.py:68
+#: .\product\models.py:83
 msgid "narrow"
 msgstr "узкий"
 
-#: .\product\models.py:72
+#: .\product\models.py:87 .\product\models.py:94
 msgid "Image"
 msgstr ""
 
-#: .\product\models.py:75
+#: .\product\models.py:90
 msgid "Position"
+msgstr ""
+
+#: .\product\models.py:95
+msgid "Images"
 msgstr ""
 
 #: .\templates\zinnia\base.html:17 .\templates\zinnia\skeleton.html:36
@@ -195,10 +223,6 @@ msgstr ""
 
 #: .\templates\zinnia\base.html:31
 msgid "Welcome to our site."
-msgstr ""
-
-#: .\templates\zinnia\base.html:36
-msgid "Categories"
 msgstr ""
 
 #: .\templates\zinnia\base.html:42
