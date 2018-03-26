@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
 
-from product.views import switch_language
+from product.views import *
 
 
 urlpatterns = [
@@ -35,4 +35,17 @@ urlpatterns = [
 
     path('i18n/', include('django.conf.urls.i18n')),
     path('language/<language>/', switch_language),
+
+    url(r'^$', home_page, name='home_page'),
+    url(r'^about/', company_page, name='company_page'),
+    url(r'^projects/', projects_page, name='projects_page'),
+    url(r'^project/(?P<slug>[\w-]+)/$', project_page, name='project_page'),
+    url(r'^contact/', contact_page, name='contact_page'),
+    url(r'^blog/', blog_page, name='blog_page'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns

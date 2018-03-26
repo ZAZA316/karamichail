@@ -1,0 +1,54 @@
+{% load static i18n %}
+
+<header id="header">
+  <div class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+
+        </button>
+        <div class="navbar-brand logo">
+          <a href="#">
+            <img src="{% static 'product/images/logo.jpg' %}" alt="logo" class="hidden-xs">
+            <img src="{% static 'product/images/mobile-logo.jpg' %}" alt="logo" class="visible-xs">
+          </a>
+        </div>
+
+        <ul class="language visible-xs">
+          <li><a href="#">eng</a></li>
+          <li><a href="#">el</a></li>
+          <li><a href="#">ru</a></li>
+        </ul>
+      </div>
+
+      <div id="main-navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav main-nav">
+          <li><a href="{% url 'home_page' %}">{% trans "Home" %}</a></li>
+          <li><a href="{% url 'company_page' %}">{% trans "Company" %}</a></li>
+          <li><a href="{% url 'projects_page' %}">{% trans "Projects" %}</a></li>
+          <li><a href="{% url 'contact_page' %}">{% trans "Contact" %}</a></li>
+          <li><a href="{% url 'blog_page' %}">{% trans "Blog" %}</a></li>
+        </ul>
+
+{#        <ul class="nav navbar-nav navbar-right language hidden-xs">#}
+{#          <li><a href="#">eng</a></li>#}
+{#          <li><a href="#">el</a></li>#}
+{#          <li><a href="#">ru</a></li>#}
+{#        </ul>#}
+
+        <form name="ui" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+            <input name="next" type="hidden" value="{{ redirect_to }}" />
+            <input name="language" type="hidden"/>
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            <ul class="nav navbar-nav navbar-right language hidden-xs">
+            {% for language in languages %}
+                <li><a href="#" onclick="document.ui.language.value='{{ language.code}}'; document.ui.submit();">{{ language.code }}</a></li>
+            {% endfor %}
+            </ul>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>

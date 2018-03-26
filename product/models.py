@@ -68,7 +68,6 @@ class Project(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        # return (en|el|ru)/projects/{slug}
         return '/projects/' + self.slug
 
     class Meta:

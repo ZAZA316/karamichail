@@ -1,0 +1,25 @@
+{% load i18n static %}<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'product/css/main.css' %}">
+  {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}" />{% endif %}
+</head>
+<body>
+  {% block wrapper_start %}<div id="wrapper">{% endblock %}
+    {% include "product/header.html" %}
+    {% block content %}{% endblock %}
+    {% include "product/footer.html" %}
+  {% block wrapper_end %}</div>{% endblock %}
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="{% static 'product/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'product/js/wow.min.js' %}"></script>
+  <script src="{% static 'product/js/slick.min.js' %}"></script>
+  <script src="{% static 'product/js/jquery.main.js' %}"></script>
+</body>
+</html>

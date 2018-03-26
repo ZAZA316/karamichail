@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-02 00:25+0800\n"
+"POT-Creation-Date: 2018-03-15 22:56+0800\n"
 "PO-Revision-Date: 2018-02-28 11:19+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,6 +41,18 @@ msgstr ""
 msgid "Language"
 msgstr "Язык"
 
+#: .\karamichail\settings.py:166
+msgid "English"
+msgstr "Английский"
+
+#: .\karamichail\settings.py:167
+msgid "Greek"
+msgstr "Греческий"
+
+#: .\karamichail\settings.py:168
+msgid "Russia"
+msgstr "Россия"
+
 #: .\product\apps.py:7
 msgid "Product"
 msgstr "Продукт"
@@ -61,7 +73,7 @@ msgstr ""
 msgid "Features"
 msgstr ""
 
-#: .\product\models.py:21 .\product\models.py:43 .\product\models.py:88
+#: .\product\models.py:21 .\product\models.py:43 .\product\models.py:87
 msgid "Title"
 msgstr ""
 
@@ -145,7 +157,7 @@ msgstr ""
 msgid "Bathrooms"
 msgstr ""
 
-#: .\product\models.py:57 .\product\models.py:89
+#: .\product\models.py:57 .\product\models.py:88
 msgid "Comment"
 msgstr ""
 
@@ -173,37 +185,53 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: .\product\models.py:64 .\product\models.py:91
+#: .\product\models.py:64 .\product\models.py:90
 msgid "Weight"
 msgstr ""
 
-#: .\product\models.py:75
+#: .\product\models.py:74
 msgid "Project"
 msgstr ""
 
-#: .\product\models.py:76
+#: .\product\models.py:75 .\product\templates\product\header.html:28
 msgid "Projects"
-msgstr ""
+msgstr "Проекты"
 
-#: .\product\models.py:82
+#: .\product\models.py:81
 msgid "wide"
 msgstr "широкий"
 
-#: .\product\models.py:83
+#: .\product\models.py:82
 msgid "narrow"
 msgstr "узкий"
 
-#: .\product\models.py:87 .\product\models.py:94
+#: .\product\models.py:86 .\product\models.py:93
 msgid "Image"
 msgstr ""
 
-#: .\product\models.py:90
+#: .\product\models.py:89
 msgid "Position"
 msgstr ""
 
-#: .\product\models.py:95
+#: .\product\models.py:94
 msgid "Images"
 msgstr ""
+
+#: .\product\templates\product\header.html:26
+msgid "Home"
+msgstr "Главная"
+
+#: .\product\templates\product\header.html:27
+msgid "Company"
+msgstr "Компания"
+
+#: .\product\templates\product\header.html:29
+msgid "Contact"
+msgstr "Контакт"
+
+#: .\product\templates\product\header.html:30 .\templates\zinnia\base.html:23
+msgid "Blog"
+msgstr "Блог"
 
 #: .\templates\zinnia\base.html:17 .\templates\zinnia\skeleton.html:36
 msgid "RSS feed of last entries"
@@ -211,10 +239,6 @@ msgstr ""
 
 #: .\templates\zinnia\base.html:18
 msgid "RSS feed of last discussions"
-msgstr ""
-
-#: .\templates\zinnia\base.html:23
-msgid "Blog"
 msgstr ""
 
 #: .\templates\zinnia\base.html:29
@@ -313,12 +337,3 @@ msgid ""
 "\"https://github.com/Fantomas42/django-blog-zinnia\">Zinnia "
 "%(ZINNIA_VERSION)s</a>."
 msgstr ""
-
-#~ msgid "English"
-#~ msgstr "Английский"
-
-#~ msgid "Greek"
-#~ msgstr "Греческий"
-
-#~ msgid "Russia"
-#~ msgstr "Россия"

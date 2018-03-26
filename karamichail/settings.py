@@ -11,10 +11,12 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from datetime import date
+from collections import OrderedDict
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+# PROJECT_DIR = os.path.dirname(__file__)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -25,7 +27,9 @@ SECRET_KEY = 'k(9t4(4b6fa)6*8vvsn+!m$+roxd$drz8+m3t4vj&1g2cp0uuk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['185.236.130.149']
+ALLOWED_HOSTS = ['127.0.0.1', '185.236.130.149']
+
+INTERNAL_IPS = ['127.0.0.1', '185.236.130.149']
 
 SITE_ID = 1
 
@@ -35,6 +39,7 @@ SITE_ID = 1
 INSTALLED_APPS = [
     'jet.dashboard',
     'jet',
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.sites',
@@ -44,16 +49,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'product',
     'ckeditor',
-    # 'disqus',
     'django_comments',
     'mptt',
     'tagging',
     'zinnia',
     'rosetta',
-    # 'admin_reorder',
+    'constance',
+    'constance.backends.database',
+    'debug_toolbar',
+    'imagekit',
+    'product.templatetags.extra_filters',
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -62,7 +71,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'admin_reorder.middleware.ModelAdminReorder',
 ]
 
 ROOT_URLCONF = 'karamichail.urls'
@@ -74,6 +82,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'constance.context_processors.config',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
@@ -117,24 +126,67 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-'''DISQUS_API_KEY = '6bE21E3j7aSNuOUUlh7zDXGAp5KQ1RYQD5h6er4Demf9iHOwTrWw5FPes7uvGxEJ'
-DISQUS_WEBSITE_SHORTNAME = 'karamichail'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold'],
+            ['Link'],
+            ['BulletedList', 'NumberedList']
+        ]
+    }
+}
 
-ADMIN_REORDER = (
-    {'app': 'auth', 'models': ('auth.User', 'auth.Group')},
-    {'app': 'product'},
-    {
-        'app': 'zinnia',
-        'models': (
-            'zinnia.Category',
-            'zinnia.Entry',
-            'django_comments.Comment',
-            'sites.Site',
-            'tagging.Tag',
-            'tagging.TaggedItem',
-        )
-    },
-)'''
+MODELTRANSLATION_TRANSLATION_FILES = ('product.translation',)
+MODELTRANSLATION_TRANSLATION_REGISTRY = 'matau.translation'
+
+CONSTANCE_CONFIG = OrderedDict([
+    ('Telephone', ('', '')),
+    ('Fax', ('', '')),
+    ('Email', ('', '')),
+    ('Address', ('', '')),
+    ('Facebook', ('', '')),
+    ('Instagram', ('', '')),
+    ('Latitude', ('', '')),
+    ('Longitude', ('', '')),
+])
+
+CONSTANCE_CONFIG_FIELDSETS = {
+    'General Settings': ('Telephone', 'Fax', 'Email', 'Address'),
+    'Social Media Url Settings': ('Facebook', 'Instagram'),
+    'Business Location': ('Latitude', 'Longitude'),
+}
+
+CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
+
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
+CONSTANCE_DATABASE_CACHE_BACKEND = 'default'
+
+
+DEBUG_TOOLBAR_PANELS = [
+    'debug_toolbar.panels.versions.VersionsPanel',
+    'debug_toolbar.panels.timer.TimerPanel',
+    'debug_toolbar.panels.settings.SettingsPanel',
+    'debug_toolbar.panels.headers.HeadersPanel',
+    'debug_toolbar.panels.request.RequestPanel',
+    'debug_toolbar.panels.sql.SQLPanel',
+    'debug_toolbar.panels.staticfiles.StaticFilesPanel',
+    'debug_toolbar.panels.templates.TemplatesPanel',
+    'debug_toolbar.panels.cache.CachePanel',
+    'debug_toolbar.panels.signals.SignalsPanel',
+    'debug_toolbar.panels.logging.LoggingPanel',
+    'debug_toolbar.panels.redirects.RedirectsPanel',
+]
+
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+}
 
 
 # Internationalization
@@ -142,11 +194,11 @@ ADMIN_REORDER = (
 
 LANGUAGE_CODE = 'en-us'
 
-ugettext = lambda s: s
+gettext = lambda s: s
 LANGUAGES = (
-    ('en', 'English'),
-    ('el', 'Greek'),
-    ('ru', 'Russia'),
+    ('en', gettext('English')),
+    ('el', gettext('Greek')),
+    ('ru', gettext('Russia')),
 )
 
 TIME_ZONE = 'UTC'
@@ -165,9 +217,13 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    # ('node_modules', os.path.join(BASE_DIR, 'node_modules')),
+]
 
-TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),

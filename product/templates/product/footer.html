@@ -1,0 +1,47 @@
+{% load static i18n %}
+
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-2">
+        <div class="footer-wrap">
+          <div class="footer-top">
+            <div class="row">
+              <div class="col-xs-6">
+                <address>
+                  <strong class="title hidden-xs">Contact Us</strong>
+                  {{ config.Telephone }} <br>
+                  <a href="mailto:{{ config.Email }}">{{ config.Email }}</a>
+                </address>
+              </div>
+              <div class="col-xs-6">
+                <ul class="social-networks">
+                  <li><a href="{{ config.Facebook }}" class="facebook">facebook</a></li>
+                  <li><a href="{{ config.Instagram }}" class="instagram">instagram</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="row">
+              <div class="col-xs-12 col-sm-3">
+                <a href="#" class="link">Get Directions</a>
+              </div>
+
+              <div class="col-xs-12 col-sm-9 hidden-xs">
+                <ul class="footer-links">
+                  <li><a href="{% url 'home_page' %}">{% trans "Home" %}</a></li>
+                  <li><a href="{% url 'company_page' %}">{% trans "Company" %}</a></li>
+                  <li><a href="{% url 'projects_page' %}">{% trans "Projects" %}</a></li>
+                  <li><a href="{% url 'contact_page' %}">{% trans "Contact" %}</a></li>
+                  <li><a href="{% url 'blog_page' %}">{% trans "Blog" %}</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
