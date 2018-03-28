@@ -1,0 +1,68 @@
+{% extends 'product/base.html' %}
+{% load static %}
+{% load imagekit %}
+{% load extra_filters %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<main id="main">
+  <div class="intro-block container">
+    <div class="intro-carousel">
+      {% for slide in slides %}
+      <div class="slide-item">
+        <div class="image-wrap">
+          {% thumbnail '950x541' slide.image -- alt="banner image" class="hidden-xs" %}
+          {% thumbnail '271x222' slide.image -- alt="banner image" class="visible-xs" %}
+          <div class="text-content">
+            <h1 class="">
+              {{ slide.title }}
+            </h1>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      <div class="carousel-arrows">
+        <!-- carousel dots will be added here -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="featured-article">
+      <div class="row">
+        <div class="col-xs-11 col-xs-offset-1 col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
+          <header>
+            <h2>Προτεινόμενα Ακίνητα</h2>
+          </header>
+        </div>
+
+        {% for project in projects %}
+        <div class="wow fadeInUpBig article-wrap col-xs-11 col-xs-offset-1 col-sm-9 col-sm-offset-3 col-md-4 col-lg-4 col-lg-offset-2">
+          <a href="{% url 'project_page' project.slug %}" class="article-img {% if project.status == 2 %}has-badge{% elif project.status == 5 %}has-badge2{% endif %}">
+            {% thumbnail '410x326' images|get_by_index:forloop.counter0 -- alt="article image" %}
+
+            <div class="inner-content">
+              <ul class="room-info">
+                <li class="dimension">{{ project.surface }} τ.μ</li>
+                <li class="shower">{{ project.bathrooms }} Μπάνια</li>
+                <li class="bed">{{ project.bedrooms }} Υπνοδωμάτια</li>
+              </ul>
+
+              <p>{{ project.general_description|limit_description|safe }}</p>
+            </div>
+          </a>
+
+          <div class="meta">
+            <span>{{ project.title }}</span>
+
+            <strong>{{ project.price }}€</strong>
+          </div>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

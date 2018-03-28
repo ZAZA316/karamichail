@@ -1,0 +1,49 @@
+{% extends 'product/base.html' %}
+{% load static %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<main id="main">
+  <div class="container">
+    <div class="blog-block">
+      <div class="row">
+        <div class="col-xs-11 col-xs-offset-1 col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
+          <div class="blog-banner">
+            <div class="banner-hold">
+              <img class="hidden-xs" src="{% static 'product/images/blog-banner.jpg' %}" alt="blog banner">
+              <img class="visible-xs" src="{% static 'product/images/blog-banner-small.jpg' %}" alt="blog banner">
+
+              <div class="text">
+                <strong>Σίβηρη</strong>
+              </div>
+            </div>
+            <time datetime="2017-11-20">20.11.2017</time>
+          </div>
+        </div>
+
+        <div class="col-xs-11 col-xs-offset-1 col-sm-9 col-sm-offset-3 col-md-3 col-lg-4 col-lg-offset-2">
+          <h1>
+            Μαγευτική <br>
+            απόδραση <br>
+            στη Χαλκιδική <br>
+          </h1>
+        </div>
+
+        <div class="blog-right-item col-xs-11 col-xs-offset-1 col-sm-9 col-sm-offset-3 col-md-4 col-md-offset-2 col-lg-offset-1">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore ipsum dolor sit amet.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore ipsum dolor sit amet.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore ipsum dolor sit amet.</p>
+
+          <ul class="social-icons">
+            <li><a href="#" class="linkedin">linkedin</a></li>
+            <li><a href="#" class="facebook">facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,113 @@
+{% extends 'product/base.html' %}
+{% load static %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<main id="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-11 col-xs-offset-1 col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2">
+        <div class="featured-blog row">
+          <div class="blog-item large-blog col-xs-12">
+            <div class="blog-wrap">
+              <a href="#" class="inner-wrap">
+                <div class="img-hold">
+                  <img src="{% static 'product/images/blog01.jpg' %}" alt="banner image" class="hidden-xs">
+                  <img src="{% static 'product/images/blog01-small.jpg' %}" alt="banner image" class="visible-xs">
+                </div>
+                <div class="text-content">
+                  <div>
+                    <h1>
+                      Μαγευτική <br>
+                      απόδραση <br>
+                      στη Χαλκιδική
+                    </h1>
+                    <time class="visible-xs" datetime="2017-11-20">20.11.2017</time>
+                  </div>
+                </div>
+              </a>
+              <div class="blog-meta">
+                <time datetime="2017-11-20">20.11.2017</time>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog-item smallest-blog col-xs-12 col-md-5 col-lg-4">
+            <div class="blog-wrap">
+              <a href="#" class="inner-wrap">
+                <div class="img-hold">
+                  <img src="{% static 'product/images/blog02.jpg' %}" alt="banner image" class="hidden-xs">
+                  <img src="{% static 'product/images/blog02-small.jpg' %}" alt="banner image" class="visible-xs">
+                </div>
+                <div class="text-content">
+                  <div>
+                    <h1>
+                      Δίπλα από τον <br>
+                      βαθυγάλαζο καθαρό <br>
+                      ουρανό του <br>
+                      ΜυρτώουΠελάγους
+                    </h1>
+                    <time class="visible-xs" datetime="2017-11-20">20.11.2017</time>
+                  </div>
+                </div>
+              </a>
+              <div class="blog-meta">
+                <time datetime="2017-11-20">20.11.2017</time>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog-item small-blog col-xs-12 col-md-5 col-lg-6 col-md-offset-2">
+            <div class="blog-wrap">
+              <a href="#" class="inner-wrap">
+                <div class="img-hold">
+                  <img src="{% static 'product/images/blog03.jpg' %}" alt="banner image" class="hidden-xs">
+                  <img src="{% static 'product/images/blog02-small.jpg' %}" alt="banner image" class="visible-xs">
+                </div>
+                <div class="text-content">
+                  <div>
+                    <h1>
+                      Δίπλα από τον <br>
+                      βαθυγάλαζο καθαρό <br>
+                      ουρανό του <br>
+                      ΜυρτώουΠελάγους
+                    </h1>
+                    <time class="visible-xs" datetime="2017-11-20">20.11.2017</time>
+                  </div>
+                </div>
+              </a>
+              <div class="blog-meta">
+                <time datetime="2017-11-20">20.11.2017</time>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog-item mid-blog col-xs-12 col-md-10 col-lg-8">
+            <div class="blog-wrap">
+              <a href="#" class="inner-wrap">
+                <div class="img-hold">
+                  <img src="{% static 'product/images/blog04.jpg' %}" alt="banner image">
+                </div>
+                <div class="text-content">
+                  <div>
+                    <h1>
+                      Μαγευτική <br>
+                      απόδραση <br>
+                      στη Χαλκιδική
+                    </h1>
+                    <time class="visible-xs" datetime="2017-11-20">20.11.2017</time>
+                  </div>
+                </div>
+              </a>
+              <div class="blog-meta">
+                <time datetime="2017-11-20">20.11.2017</time>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

@@ -31,7 +31,7 @@ def projects_page(request):
     projects = Project.objects.filter(status__gt=0).order_by('weight')
     locations = []
     for project in projects:
-        locations.append({'longitude': project.long, 'latitude': project.lat})
+        locations.append([project.title, project.long, project.lat])
 
     images = []
     for project in projects:

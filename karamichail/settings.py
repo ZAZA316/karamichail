@@ -147,13 +147,14 @@ CONSTANCE_CONFIG = OrderedDict([
     ('Address', ('', '')),
     ('Facebook', ('', '')),
     ('Instagram', ('', '')),
+    ('Twitter', ('', '')),
     ('Latitude', ('', '')),
     ('Longitude', ('', '')),
 ])
 
 CONSTANCE_CONFIG_FIELDSETS = {
     'General Settings': ('Telephone', 'Fax', 'Email', 'Address'),
-    'Social Media Url Settings': ('Facebook', 'Instagram'),
+    'Social Media Url Settings': ('Facebook', 'Instagram', 'Twitter'),
     'Business Location': ('Latitude', 'Longitude'),
 }
 

@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>{% block title %}{% endblock %}</title>
+{#  <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>#}
   <link rel="stylesheet" href="{% static 'product/css/main.css' %}">
   {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}" />{% endif %}
 </head>
