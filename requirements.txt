@@ -21,7 +21,7 @@ django-tagging==0.4.6
 django-xmlrpc==0.1.8
 feedparser==5.2.1
 google-api-python-client==1.4.1
-httplib2==0.10.3
+httplib2==0.18.0
 idna==2.6
 microsofttranslator==0.8
 mock==2.0.0
