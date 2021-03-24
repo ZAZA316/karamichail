@@ -38,7 +38,7 @@ python-memcached==1.59
 pytz==2018.3
 regex==2018.2.21
 requests==2.18.4
-rsa==3.4.2
+rsa==4.1
 six==1.11.0
 sqlparse==0.2.4
 Unipath==1.1
