@@ -7,7 +7,7 @@ django-blog-zinnia==0.19
 django-ckeditor==5.4.0
 django-constance==2.1.0
 django-contrib-comments==1.8.0
-django-debug-toolbar==1.9.1
+django-debug-toolbar==1.11.1
 django-imagekit==4.0.2
 django-jet==1.0.7
 django-js-asset==1.0.0
